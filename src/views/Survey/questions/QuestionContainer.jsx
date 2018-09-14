@@ -6,7 +6,6 @@ import Ethnicity from './Ethnicity';
 import Gender from './Gender';
 import { Navigation } from '../components';
 
-
 export default class Question extends React.Component {
   static propTypes = {
     updateSurveyData: PropTypes.func.isRequired,
@@ -29,8 +28,8 @@ export default class Question extends React.Component {
   }
 
   handleChange(key, value) {
-    const { value } = ev.currentTarget;
-    this.setState({ age: value });
+    // const { value } = ev.currentTarget;
+    this.setState({ [key]: value });
     this.props.updateSurveyData({ age: value });
   }
 
